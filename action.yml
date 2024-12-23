@@ -24,8 +24,8 @@ inputs:
     required: false
   
   CREDLY_SORT:
-    description: "The sort type for return credly badges [RECENT/POPULAR]"
-    default: RECENT
+    description: "The sort type for return credly badges [RECENT/POPULAR/RANK]"
+    default: RANK
     required: false
   
   BADGE_SIZE:

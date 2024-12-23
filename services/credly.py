@@ -29,7 +29,12 @@ class Credly:
         return response.text
 
     def sort_by(self):
-        return "most_popular" if self.SORT == "POPULAR" else "-state_updated_at"
+        if self.SORT == "POPULAR":
+            return "most_popular"
+        elif self.SORT == "RECENT":
+            return "-state_updated_at"
+        else:
+            return "rank"
 
     def convert_to_dict(self, htmlBadge):
         soupBadge = BeautifulSoup(str(htmlBadge), "lxml")
